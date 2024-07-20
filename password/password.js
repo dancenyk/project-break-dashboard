@@ -6,12 +6,14 @@ const minusculas = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
 const symbols = "!@#$%^&*()-_=+";
 
-const valor = parseInt(charactersLength).value
+const valor = parseInt(charactersLength.value)
+console.log(valor)
 
 
 
 
-passwordBtn.addEventListener("input",()=>{
+passwordBtn.addEventListener("click",()=>{
+    console.log("test")
     let text = "que"
     passwordGenContainer.innerText = text
 })

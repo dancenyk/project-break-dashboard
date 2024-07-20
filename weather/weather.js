@@ -17,6 +17,7 @@ const getData = async () => {
         console.log(data)
         console.log(data.forecast.forecastday[0].hour)
        
+        //intentar hacerlo con destructuring 
         let city = data.location.name
         let country = data.location.country
         let condition = data.current.condition.text
