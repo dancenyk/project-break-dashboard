@@ -8,14 +8,10 @@ const fullHour = () =>{
     const hour = date.getHours()
     const minutes = date.getMinutes()
     const seconds = date.getSeconds()
-
-    //voy a convertir esos datos en un string para poder saber su lenght y en caso de que sea menos que 2 , le pongo un cero por delante
     
-    const hourFixed = hour.toString()
-    const minutesFixed = minutes.toString()
-    const secondsFixed = seconds.toString()
-
-    
+    const hourFixed = hour < 10 ? '0' + hour : hour;
+    const minutesFixed = minutes < 10 ? '0' + minutes : minutes;
+    const secondsFixed = seconds < 10 ? '0' + seconds : seconds;
 
    let hourFormated = `${hourFixed}:${minutesFixed}:${secondsFixed}`
 
@@ -46,14 +42,10 @@ const fullDate = () =>{
     const month = date.getMonth()+1
     const year = date.getFullYear()
 
-    let dateFormated = `${day}/${month}/${year}`
+    const dayFixed = day < 10 ? '0' + day : day;
+    const monthFixed = month < 10 ? '0' + month : month;
 
-    // esta solucion que he visto es poco escalable,ya que si me encuentor con más de una variable que necesite el cero por delante, no me va a funcionar
-    if(month <10){
-        dateFormated = `${day}/0${month}/${year}`
-    }else{
-        dateFormated = `${day}/0${month}/${year}`
-    }
+    let dateFormated = `${dayFixed}/${monthFixed}/${year}`
 
     dateContainer.innerHTML = dateFormated
     return dateFormated; 

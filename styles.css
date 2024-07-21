@@ -348,7 +348,7 @@
     display: none;
   }
 
-  /*mis css*/
+  /*MIS CSS*/
 
   /*CLOCK CSS*/
 
@@ -356,6 +356,12 @@
   body{
     background-color: rgb(214, 34, 151);
     background-image: url();
+  }
+
+  .container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   .navTop a{
@@ -407,9 +413,7 @@
     display: flex;
     justify-content: flex-end;
     gap: 20px;
-    padding: 25px;
     border-bottom: 1px solid white;
-    margin-bottom: 15px;
   }
 
 
@@ -450,32 +454,47 @@
   /*WEATHER CSS*/
 
   .mainWeather{
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
   }
 
   .weatherSection{
-    height: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 450px;
     width: 490px;
     background-color: rgba(0, 0, 0, 0.294);
     border-radius: 10px;
     color: white;
+    box-sizing: border-box;
+    justify-content: space-between;
   }
 
   .weatherSection #temperature{
     display: flex;
     justify-content: space-around;
-    border: 2px solid blue;
+    align-items: center;
+    
+  }
 
+  .weatherSection #temperature span{
+    font-size: 50px;
   }
 
   .weatherSection #parameters{
     display: flex;
     flex-direction: column;
-    border: 2px solid pink;
+    font-size: 13px;
+  }
 
+  .weatherSection #parameters p{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    font-size: 13px;
   }
 
   #thermo{
@@ -484,16 +503,27 @@
   }
 
   #prevision{
-    border: 2px solid red;
     text-align: center; 
   }
   
   #forecastWeather{
     display: flex;
     gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    overflow-x: scroll;
   }
   
-  #currentWeather{
+  .weatherSection #currentWeather{
     display: flex;
-    justify-content: space-between;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
   }
+
+#prevision p, 
+#prevision img {
+    margin: 0px
+}
