@@ -354,8 +354,12 @@
 
 
   body{
-    background-color: rgb(214, 34, 151);
-    background-image: url();
+    margin: 0;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./img/1.jpg'); 
+    transition: background-image 1s ease
   }
 
   .container{
@@ -363,6 +367,7 @@
     display: flex;
     flex-direction: column;
   }
+
 
   .navTop a{
     display: flex;
@@ -385,7 +390,7 @@
     width: 290px;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.294);
+    background-color: rgba(0, 0, 0, 0.596);
     border-radius: 10px;
     align-items: center;
     justify-content: center;
@@ -422,14 +427,13 @@
   /*PASSWORD CSS*/
 
   .passwordSection{
-    height: 100px;
-    width: 290px;
+    height: 300px;
+    width: 390px;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.294);
+    background-color: rgba(0, 0, 0, 0.596);
     border-radius: 10px;
     align-items: center;
-    justify-content: center;
     padding: 50px;
     color: white;
   }
@@ -472,15 +476,16 @@
   .weatherSection{
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    height: 450px;
+    padding: 0px 20px ;
+    height: 350px;
     width: 490px;
-    background-color: rgba(0, 0, 0, 0.294);
+    background-color: rgba(0, 0, 0, 0.596);
     border-radius: 10px;
     color: white;
     box-sizing: border-box;
-    justify-content: space-between;
   }
+
+ 
 
   .weatherSection #temperature{
     display: flex;
@@ -579,3 +584,121 @@ nav{
   padding-right: 50px;
   padding-bottom: 30px;
 }
+
+
+.linkContainer {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.linkContainer li{
+  display: flex;
+  background-color: #33333393;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  position: relative;
+  border-radius: 10px;
+  margin: 10px;
+  min-width: 30px;
+}
+
+.linkContainer li a{
+  text-decoration: none;
+  color: white;
+}
+
+.linkContainer button{
+  height: 20px;
+  width: 20px;
+  background-color: rgb(196, 13, 13);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* DASHBOARD */
+
+.mainDashboard {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.left, .right{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100vw;
+  align-items: center;
+}
+
+.left{
+  margin-top: 40px;
+}
+
+.clockDashboard{
+  color: #ffffffb0;
+  height: 50px;
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.linkSection, .clockDashboard, .weatherSection, .passwordSection {
+  box-sizing: border-box;
+}
+
+.navDashboard{
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .mainDashboard {
+    flex-direction: column; 
+  }
+  
+  .linkSection, .clockDashboard, .weatherSection, .passwordSection {
+    max-width: 100%;
+  }
+
+  .weatherSection {
+    order: 2;
+  }
+
+  .linkSection {
+    order: 3;
+  }
+
+  .passwordSection {
+    order: 4;
+  }
+
+  .navFooter {
+    order: 5;
+  }
+}
+
+
+
+
+
+
+

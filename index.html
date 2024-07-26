@@ -7,22 +7,63 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>Este es el INDEX HTML nuevo</p>
+    <div class="container">
+    <main class="mainDashboard">
+        <div class="left">
+            <div class="linkSection">
+                <div class="encabezadoPassword">
+                    <h2 class="password">Añade tu enlace de interés</h2>
+                    <form id="linkForm" action="">
+                        <input type="text" name="nombreEnlace" id="nombreEnlace" placeholder="Nombre de tu enlace"/>
+                        <input type="text" name="url" id="url" placeholder="Pega aquí la URL"/>
+                        <button id="linkBtn">Añadir enlace</button>
+                        <ul class="linkContainer"></ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="clockDashboard">
+                <div id="hourContainer"></div>
+                <div id="dateContainer"></div>
+            </div>
+            <div class="weatherSection">
+                <div id="cityCountry"></div>
+                <div id="currentWeather"></div>
+                <div id="forecastWeather"></div>
+            </div>
+            <div class="passwordSection">
+                <h2 class="sectionTitle">Crea tu contraseña segura</h2>
+                <form action="">
+                    <label for="charactersLength">Número de caracteres de la contraseña</label>
+                    <input type="number" name="charactersLength" id="charactersLength" min="12" max="50" value="12"/>
+                    <button id="passwordBtn">Generar Contraseña</button>
+                    <div class="passwordGenContainer"></div>
+                </form>
+            </div>
+        </div>
+    </main>
     <footer>
-        <nav class="navFooter">
+        <nav class="navFooter navDashboard">
             <a href="clock/clock.html">
-                <img src="img/clock.svg" alt="">
+                <img src="img/clock.svg" alt="Clock">
             </a>
             <a href="password/password.html">
-                <img src="img/password.svg" alt="">
+                <img src="img/password.svg" alt="Password">
             </a>
             <a href="link/link.html">
-                <img src="img/chain.svg" alt="">
+                <img src="img/chain.svg" alt="Links">
             </a>
             <a href="weather/weather.html">
-                <img src="img/weather.svg" alt="">
+                <img src="img/weather.svg" alt="Weather">
             </a>
         </nav>
     </footer>
+    <script src="clock/clock.js"></script>
+    <script src="password/password.js"></script>
+    <script src="weather/weather.js"></script>
+    <script src="link/link.js"></script>
+    <script src="background.js"></script>
+   </div>
 </body>
 </html>
