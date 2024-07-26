@@ -8,7 +8,7 @@ const forecastWeatherCont = document.getElementById("forecastWeather")
 
 let cityChoose = "Madrid"
 
-const urlForecast = `http://api.weatherapi.com/v1/forecast.json?key=8b275aee080f4909832145205241907&q=${cityChoose}&aqi=no`
+const urlForecast = `https://api.weatherapi.com/v1/forecast.json?key=8b275aee080f4909832145205241907&q=${cityChoose}&aqi=no`
 
 const getData = async () => {
     try{
