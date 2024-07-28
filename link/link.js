@@ -40,7 +40,7 @@ const cargarLinks = () =>{
 
 const mostrarEnlace = (nombreEnlace, url, index) =>{
     const template = `<li data-index="${index}">
-    <a href="http://${url}" target="_blank">${nombreEnlace}</a>
+    <a href="https://${url}" target="_blank">${nombreEnlace}</a>
     <button class="deleteBtn">X</button>
     </li>`
 

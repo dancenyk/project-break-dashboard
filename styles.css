@@ -359,7 +359,9 @@
     background-size: cover;
     background-position: center;
     background-image: url('./img/1.jpg'); 
-    transition: background-image 1s ease
+    transition: background-image 1s ease;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .container{
@@ -672,9 +674,9 @@ nav{
 
 @media (max-width: 768px) {
   .mainDashboard {
-    flex-direction: column; 
+    flex-direction: column;
   }
-  
+
   .linkSection, .clockDashboard, .weatherSection, .passwordSection {
     max-width: 100%;
   }
@@ -693,6 +695,7 @@ nav{
 
   .navFooter {
     order: 5;
+    margin-top: none;
   }
 }
 
