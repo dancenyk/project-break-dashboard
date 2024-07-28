@@ -34,19 +34,35 @@ const getData = async () => {
         `
         cityCountryCont.insertAdjacentHTML("beforeend", templateCityCountry)
         
-        let templateCurrentWeather = `
-        <div> <img src="https:${icon}" alt="weather"></div>
-        <div id="temperature"> 
-            <span>${temp}°C</span>
-            <img id="thermo" src="../img/thermometer.svg" alt="weather"
-        </div>
-        <div id="parameters"> 
-            <p>Precipitaciones: ${precipitaciones}%</p>
-            <p>Humedad: ${humedad}%</p>
-            <p>Viento: ${viento}km/h</p>
-        </div>
-        `
-        currentWeatherCont.insertAdjacentHTML("beforeend", templateCurrentWeather)
+        let templateCurrentWeather = ""
+        if (window.location.pathname.endsWith("weather.html")) {
+              templateCurrentWeather = `
+                    <div> <img src="https:${icon}" alt="weather"></div>
+                    <div id="temperature"> 
+                        <span>${temp}°C</span>
+                        <img id="thermo" src="../img/thermometer.svg" alt="weather">
+                    </div>
+                    <div id="parameters"> 
+                        <p>Precipitaciones: ${precipitaciones}%</p>
+                        <p>Humedad: ${humedad}%</p>
+                        <p>Viento: ${viento}km/h</p>
+                    </div>
+                    `;
+            } else {
+              templateCurrentWeather = `
+                    <div> <img src="https:${icon}" alt="weather"></div>
+                    <div id="temperature"> 
+                        <span>${temp}°C</span>
+                        <img id="thermo" src="img/thermometer.svg" alt="weather">
+                    </div>
+                    <div id="parameters"> 
+                        <p>Precipitaciones: ${precipitaciones}%</p>
+                        <p>Humedad: ${humedad}%</p>
+                        <p>Viento: ${viento}km/h</p>
+                    </div>
+                    `;
+            }
+            currentWeatherCont.insertAdjacentHTML("beforeend", templateCurrentWeather);
 
         return data
 
@@ -70,6 +86,4 @@ getData().then(data => {
         forecastWeatherCont.insertAdjacentHTML("beforeend", template)
     }
 });
-
-
 
