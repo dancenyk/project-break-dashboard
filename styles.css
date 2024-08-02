@@ -677,6 +677,19 @@ nav{
     flex-direction: column;
   }
 
+  .right{
+    order: 1;
+  }
+
+  .left{
+    order: 2;
+  }
+
+  .indexContenedor{
+    height: auto;
+
+  }
+
   .linkSection, .clockDashboard, .weatherSection, .passwordSection {
     max-width: 100%;
   }
